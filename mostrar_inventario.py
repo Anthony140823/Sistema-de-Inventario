@@ -9,5 +9,5 @@ def mostrar_inventario(inventario):
         Recorremos la lista y
         Extraemos los datos de los productos
         '''
-        for contador, producto in enumerate(inventario):
+        for producto in inventario:
             print(f'Id: {producto.get("id")}, Nombre: {producto.get("nombre")}, Precio: {producto.get("precio")}, Cantidad: {producto.get("cantidad")}')
