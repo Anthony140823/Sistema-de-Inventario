@@ -2,8 +2,11 @@
 
 # Función para agregar un nuevo producto:
 def agregar_producto(inventario, nombre:str, precio:float, cantidad:int):
-    #el id del produto incia en uno y se incrementa automáticamente:
-    id = 1
+    # calculamos el tamaño de la lista
+    # para saber qué número de id le corresponde a cada producto
+    tamaño =len(inventario)
+    id = tamaño + 1
+    
     # Incializamos el diccionario que alvergará los datos del producto
     producto = {
         "id": id,
@@ -14,5 +17,4 @@ def agregar_producto(inventario, nombre:str, precio:float, cantidad:int):
 
     # Agregamos el producto a la lista de inventario
     inventario.append(producto)
-    id += 1
     print("\nProducto agregado correctamente")
