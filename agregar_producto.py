@@ -2,7 +2,6 @@
 
 # Función para agregar un nuevo producto:
 def agregar_producto(inventario, nombre:str, precio:float, cantidad:int):
-    print("--- Agregar Nuevo Producto ---")
     # calculamos el tamaño de la lista
     # para saber qué número de id le corresponde a cada producto
     tamaño =len(inventario)
