@@ -2,6 +2,7 @@
 
 from agregar_producto import agregar_producto
 from mostrar_inventario import mostrar_inventario
+from buscar_producto import buscar_producto
 
 # Función para mostrar el menú:
 def menu_interactivo(inventario):
@@ -19,6 +20,7 @@ def menu_interactivo(inventario):
                 # Llamamos a la función para mostrar los productos
                 mostrar_inventario(inventario)
             case 2:
+                print("\n--- Agregar Nuevo Producto ---")
                 # Pedimos al usuario que ingrese los datos del producto
                 nombre = input("Nombre: ")
                 precio = float(input("Precio: "))
@@ -26,6 +28,12 @@ def menu_interactivo(inventario):
 
                 # Llamamos a la función agregar producto
                 agregar_producto(inventario, nombre, precio, cantidad)
+            case 3:
+                print("\n--- Buscar producto por Id ---")
+                # Pedimos al usuario que ingrese un id
+                id = int(input("Ingresa el Id a Buscar: "))
+
+                buscar_producto(inventario, id)
             case 4:
                 print("Saliendo del sistema... ¡Adiós!")
                 break
